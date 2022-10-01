@@ -12,7 +12,7 @@ export const useStore = () => {
     globalState = { ...globalState, ...newState };
 
     for (const listener of listeners) {
-      listener(globalStates);
+      listener(globalState);
     }
   };
 
