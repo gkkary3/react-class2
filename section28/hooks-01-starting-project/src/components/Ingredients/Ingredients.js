@@ -98,9 +98,9 @@ const Ingredients = () => {
       });
   }, []);
 
-  const clearError = () => {
+  const clearError = useCallback(() => {
     dispatchHttp({ type: "CLEAR" });
-  };
+  },[]);
 
   const ingredientList = useMemo(() => {
     return (
